@@ -50,11 +50,10 @@ jobs:
 
     # Update Github
     - name: Commit the changes
-  run: |
-    git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    git config --global user.name "GitHub Actions Bot"
-    git checkout main
-    git add deploy/deployment.yaml
-    git diff --cached --quiet || git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
-    git push origin main
-
+      run: |
+        git config --global user.email "<>"
+        git config --global user.name "GitHub Actions Bot"
+        git checkout main
+        git add deploy/deployment.yaml
+        git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
+        git push origin main
